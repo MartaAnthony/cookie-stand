@@ -7,14 +7,35 @@ var seattleLoc = {
   maxCust: 65,
   avCookieSale: 6.3,
   cookieSales: [],
+  cookieResult: [],
   randomCustNum: function() {
     return Math.floor(Math.random() * ((this.maxCust + 1) - this.minCust) + this.minCust);
   },
   cookiePerHour: function(){
-  for (var i = 0; i < this.opHours.length; i++) {
+  for(var i = 0; i < this.opHours.length; i++) {
     this.cookieSales.push(Math.floor(this.avCookieSale * this.randomCustNum()));
   }
-}
+},
+    // totalDayCookies: function(){
+    //   var totalResult = 0;
+    //   for(var i = 0; i < this.cookieSales.length; i++) {
+    //    totalResult += this.cookieSales[i];
+    //   }
+    //   this.cookieSales.push(this.cookieResult);
+    //   console.log(Math.floor(this.cookieResult));
+    // },
+
+    render: function(){
+      var parent = document.getElementById('seattle');
+      for(var i = 0; i < this.opHours.length; i++) {
+        var listItem = document.createElement('li');
+        listItem.textContent = `${this.opHours[i]} ${this.cookieSales[i]}`; 
+        parent.appendChild(listItem);
+      }
+      
+    },
+
+    
 }
 
 var tokyoLoc = {
@@ -91,4 +112,7 @@ dubaiLoc.cookiePerHour();
 parisLoc.cookiePerHour();
 limaLoc.cookiePerHour();
 
+// seattleLoc.totalDayCookies();
+
+seattleLoc.render();
 
