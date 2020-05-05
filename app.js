@@ -46,6 +46,9 @@ var seattleLoc = {
   },
   render: function(){
 
+    seattleLoc.calcCustomersEachHour();
+    seattleLoc.calcCookiesSoldPerHour;    
+
     //render the name of the store
     
     //get the parent element from the DOM
@@ -74,8 +77,7 @@ var seattleLoc = {
   }
 }
 
-seattleLoc.calcCustomersEachHour();
-seattleLoc.calcCookiesSoldPerHour;
+
 seattleLoc.render();
 
 function getRandomNumber(min, max) {
