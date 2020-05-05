@@ -1,5 +1,4 @@
 
-// 
 
 // need an array to store the hours - given
 
@@ -38,7 +37,7 @@ var seattleLoc = {
     for(var i =0; i<this.custEachHour.length; i++){
       var wholeCookiesSoldForOneHour = Math.ceil(this.custEachHour[i] * this.avCookieSalePerCust);
 
-      this.CookiesSoldEachHour.push(wholeCookiesSoldForOneHour);
+      this.cookiesPerHour.push(wholeCookiesSoldForOneHour);
 
       this.totalCookiesForTheDay += wholeCookiesSoldForOneHour;
     }
@@ -47,7 +46,7 @@ var seattleLoc = {
   render: function(){
 
     seattleLoc.calcCustomersEachHour();
-    seattleLoc.calcCookiesSoldPerHour;    
+    seattleLoc.calcCookiesSoldPerHour();    
 
     //render the name of the store
     
@@ -76,7 +75,6 @@ var seattleLoc = {
 
   }
 }
-
 
 seattleLoc.render();
 
