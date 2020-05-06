@@ -48,6 +48,11 @@
         tableRow.appendChild(tableData);
         };
 
+        //WHY ISNT IT WORKING
+      // var tableDataTot = document.createElement('td');
+      // tableDataTot.textContent = this.totalCookiesForTheDay;
+      // tableRow, appendChild(tableData);
+
       parentElement.appendChild(tableRow);
     };
 
@@ -78,7 +83,7 @@
     var tokyoLoc = new Location('Tokyo', 3, 24, 1.2);
     tokyoLoc.render();
 
-    var dubaiLoc = new Location('Dubai', 23, 65, 6.3);
+    var dubaiLoc = new Location('Dubai', 11, 38, 3.7);
     dubaiLoc.render();
 
     var parisLoc = new Location('Paris', 20, 38, 2.3);
