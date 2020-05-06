@@ -28,72 +28,61 @@
         this.totalCookiesForTheDay += wholeCookiesSoldForOneHour;
       };
     }
+    
+    
+    Location.prototype.render = function(){
+      this.calcCustomersEachHour();
+      this.calcCookiesSoldPerHour();
+
+      var parentElement = document.getElementById('table');
+    
+      var tableRow = document.createElement('tr');
+
+      var tableHeader = document.createElement('th');
+      tableHeader.textContent = this.locationName;
+      tableRow.appendChild(tableHeader);
+    
+      for(var i = 0; i<this.cookiesPerHour.length; i++){
+        var tableData = document.createElement('td');
+        tableData.textContent = this.cookiesPerHour[i];
+        tableRow.appendChild(tableData);
+        };
+
+      parentElement.appendChild(tableRow);
+    };
+
+    function headerCreator(){
+      var parentElement = document.getElementById('table');
+      var tableRow = document.createElement('tr');
+      var tableHeader = document.createElement('th');
+      tableHeader.textContent = '';
+      tableRow.appendChild(tableHeader);
+
+      for(var i = 0; i<opHours.length; i++){
+        var tableHeader = document.createElement('th');
+        tableHeader.textContent = opHours[i];
+        tableRow.appendChild(tableHeader);
+      };
+
+      var tableHeader = document.createElement('th');
+      tableHeader.textContent = 'Daily Location Total';
+      tableRow.appendChild(tableHeader);
+      parentElement.appendChild(tableRow);
+      };
+
+    headerCreator();
 
     var seattleLoc = new Location('Seattle', 23, 65, 6.3);
+    seattleLoc.render();
 
-    
+    var tokyoLoc = new Location('Tokyo', 3, 24, 1.2);
+    tokyoLoc.render();
 
-  //   render = function(){
-    
-  //     seattleLoc.calcCustomersEachHour();
-  //     seattleLoc.calcCookiesSoldPerHour();    
-  
-  //     //render the name of the store
-      
-  //     //get the parent element from the DOM
-  //      //1.create an element
-  //      //2.fill it with text content
-  //      //3.append it
-  
-  //     var seattleElement = document.getElementById('seattle');
-  //     var listItem = document.createElement('li');
-  //     listItem.textContent = this.name;
-  //     seattleElement.appendChild(listItem);
-  
-  //     //render cookiesPerHour
-  //     for(var i=0; i<opHours.length; i++){
-  //       listItem = document.createElement('li');
-  //       listItem.textContent = `$${opHours[i]}: ${this.cookiesPerHour[i]} cookies`;
-  //       seattleElement.appendChild(listItem);
-  //     }
-      
-  //     //this will render totalCookiesfForTheDay to the DOM
-      
-  //     listItem = document.createElement('li');
-  //     listItem.textContent = this.totalCookiesForTheDay;
-  //     seattleElement.appendChild(listItem);
-  
-  //   }
-  // }
-  
-  // seattleLoc.render();
+    var dubaiLoc = new Location('Dubai', 23, 65, 6.3);
+    dubaiLoc.render();
 
-  //   // var seattleLoc = {
+    var parisLoc = new Location('Paris', 20, 38, 2.3);
+    parisLoc.render();
     
-  //   //   name: 'Seattle',
-  //   //   minCust: 23,
-  //   //   maxCust: 65,
-  //   //   avCookieSalePerCust: 6.3,
-  //   //   custEachHour: [],
-  //   //   cookiesPerHour: [],
-  //   //   totalCookiesForTheDay: 0,
-    
-  //   //   calcCustomersEachHour: function(){
-  //   //     // calculate the customers each hour and populate the array
-  //   //     for(var i=0; i<opHours.length; i++){
-  //   //       var custThisHour = getRandomNumber(this.minCust, this.maxCust);
-  //   //       this.custEachHour.push(custThisHour);
-  //   //     }
-  //   //   },
-    
-  //   //   calcCookiesSoldPerHour: function(){
-  //   //     // multiply the customers by the average cookies each customers buys
-  //   //     for(var i =0; i<this.custEachHour.length; i++){
-  //   //       var wholeCookiesSoldForOneHour = Math.ceil(this.custEachHour[i] * this.avCookieSalePerCust);
-    
-  //   //       this.cookiesPerHour.push(wholeCookiesSoldForOneHour);
-    
-  //   //       this.totalCookiesForTheDay += wholeCookiesSoldForOneHour;
-  //   //     }
-    
-      // },
+    var limaLoc = new Location('Lima', 2, 16, 4.6);
+    limaLoc.render();
