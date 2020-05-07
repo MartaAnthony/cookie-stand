@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <h1><span>Pat's Salmon Cookies</span><br>Sales Page</h2>
+      <h1><span>Pat's Salmon Cookies</span><br>Sales Page</h1>
     </header>
     <nav>
     <a href="index.html">Home Page</a>
@@ -19,10 +19,27 @@
       <table>
         <tbody id="table"></tbody>
       </table>
+      <form id="form">
+        <fieldset>
+          <label>Location Name</label>
+          <input name="locName" type="text" required/>
+          <br>
+          <label>Expected minimum number of customers per hour</label>
+          <input name="minCust" type="number"required/>
+          <br>
+          <label>Expected maximum number of customers per hour</label>
+          <input name="maxCust" type="number"required/>
+          <br>
+          <label>Average number of cookies per customer</label>
+          <input name="avCookieSalePerCust" type="number"required/>
+          <br>
+          <button type="submit" name="submit">Submit</button>
+        </fieldset>
+       </form> 
     </main>
     <footer>
       <img src="images/salmon.png" alt="fish"/>
-      <p>&copy 2020 Marta Anthony</p>
+      <p>&copy; 2020 Marta Anthony</p>
     </footer>
     <script src="js/app2.js"></script>
   </body>
