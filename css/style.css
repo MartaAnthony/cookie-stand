@@ -1,8 +1,8 @@
 
 
 body {
-background-color: white;
-color: rgb(53, 35, 23);
+background-color: rgb(241, 250, 250);
+color: rgb(89, 46, 30);
 font-family: 'Abel', sans-serif;
 font-size: 20px;
 width: 960px;
@@ -42,6 +42,8 @@ nav a:visited {
 
 h1 {
   text-align: center;
+  color: rgb(77, 41, 26);
+  text-shadow: 2px 2px 7px rgb(182, 163, 121);
 }
 span {
   font-family: 'Kalam', cursive;
@@ -59,12 +61,14 @@ span {
 header {
   padding: 10px;
   margin: 10px;
+  color: rgb(48, 36, 22);
 }
 
 h2 {
   font-size: 40px;
   text-align: center;
   padding-top: 10px;
+  color: rgb(109, 34, 25);
 }
 
 h3 {
@@ -80,8 +84,7 @@ margin-bottom: 20px;
 
 #about {
 text-align: justify;
-padding: 50px, 0px, 0px, 50px;;
-
+padding: 50px, 0px, 0px, 50px;
 }
 
 #cookie {
@@ -91,7 +94,14 @@ padding: 50px, 0px, 0px, 50px;;
 
 #cutter {
   float: right;
-  margin-bottom: 50px;
+  position: relative;
+  bottom: 20px;
+  right: 150px; 
+  width: 250px;
+}
+
+#addresses {
+  margin-left: 30px;
 }
 
 li{
@@ -110,8 +120,10 @@ hr {
 }
 
 table {
+  background-color: rgb(253, 253, 207);
   color: rgb(53, 35, 23);
-  padding-bottom: 120px;
+  margin-bottom: 80px;
+  margin-top: 60px;
 }
 
 th, td {
@@ -132,8 +144,10 @@ td:hover {
 }
 
 form {
-  margin: auto;
+  background-color: rgb(253, 253, 207);
   line-height: 2;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 fieldset {
